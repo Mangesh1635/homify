@@ -1,0 +1,85 @@
+<style>
+  .btn-search {
+    background-color: #fe424b;
+    color: aliceblue;
+    border-radius: 25px;
+    padding: 0 1rem;
+  }
+
+  .btn-search:hover {
+    color: #fe424b;
+    border: 1px solid gray;
+  }
+
+  .sbar {
+    margin-left: 33rem;
+    border-radius: 25px;
+    border: 1px solid #fe424b;
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    width: 100%;
+  }
+  
+  .navbar-collapse {
+  background-color: rgb(255, 255, 255); /* Change to your desired color */
+  padding: 10px; /* Add padding for better spacing */
+  border-radius: 5px; /* Optional: Add rounded corners */
+}
+
+
+
+
+  @media (max-width: 768px) {
+    .sbar {
+      margin-left: 0;
+      width: 5rem;
+      min-width: 150px; 
+    }
+
+    .navbar-collapse.show {
+    background-color: rgb(255, 255, 255); /* Change color as needed */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
+  }
+
+    .btn-search {
+      padding: 0.5rem;
+    }
+  }
+</style>
+
+<nav class="navbar navbar-expand-md bg-body-light sticky-top">
+  <div class="container-fluid">
+    <!-- Brand Icon -->
+    <a class="navbar-brand" href="/listings"><i class="fa-regular fa-compass"></i></a>
+
+    <!-- Search Bar (Always Visible) -->
+    <form class="d-flex ms-auto me-auto">
+      <input class="form-control sbar me-2" type="search" placeholder="Find Destination" aria-label="Search">
+      <button class="btn btn-search" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+    </form>
+
+    <!-- Navbar Toggler (For Collapsible Menu) -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsible Navbar Items -->
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      
+      <div class="navbar-nav ms-auto">
+        <a class="nav-link" href="/listings">Explore</a>
+        <a class="nav-link" href="/listings/new">Add new Listing</a>
+        <% if (!currUser) { %>
+          <a class="nav-link" href="/signup"><b>Signup</b></a>
+          <a class="nav-link" href="/login"><b>Login</b></a>
+        <% } %>
+        <% if (currUser) { %>
+          <a class="nav-link" href="/logout"><b>LogOut</b></a>
+        <% } %>
+      </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+

@@ -1,0 +1,200 @@
+body{
+    font-family: "Plus Jakarta Sans", seri !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+}
+
+.dark{
+    background-color:black;
+    color: #ebebeb;
+}
+
+.container{
+    flex: 1;
+}
+.navbar{
+    height: 5rem;
+    background-color:rgb(255, 255, 255);
+}
+
+.nav-link :hover{
+    color: #fe424b;
+}
+
+.fa-compass{
+    color: #fe424b;
+    font-size: 2rem;
+}
+
+.nav-link{
+    color: #222222 !important;
+    transition:none;
+
+}
+
+.nav-link:hover{
+    color: #fe424b !important;
+    transform: scale(1.1);
+}
+
+.f-info-links a{
+    text-decoration: none;
+    color: #222222;
+}
+
+.f-info-links a:hover{
+    text-decoration: underline;
+    color: #222222;
+}
+
+.f-info{
+    display: flex;
+    height: 8rem;
+    background-color: #ebebeb;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items:space-evenly;
+    text-align: center;
+}
+
+.f-info-links, 
+.f-info-socials, .f-info-brand{
+    width: 100%;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.f-info-socials i{
+    margin-right: 1rem;
+    font-size: 1.3rem;
+    transition: transform .2s;
+}
+
+.f-info-socials i:hover{
+    color: #fe424b !important;
+    transform: scale(1.2);
+
+}
+
+.listing-card{
+    border: none !important; 
+    margin-bottom: 2rem;
+
+}
+
+.card-img-top{
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+
+}
+
+.cart-body{
+    padding: 0 !important;
+}
+
+.card-text p{
+    font-weight: 400 !important;     
+}
+
+.listing-link{
+    text-decoration: none;
+}
+
+.card-img-overlay{
+    opacity: 0;
+    
+}
+
+.card-img-overlay:hover{
+    opacity: 0.3 ;
+    background-color: #fff;
+
+}
+
+/* new listing */
+.add-btn{
+    background-color: #fe424b !important;
+    border: none !important;
+    transition: transform .2s;
+}
+
+.add-btn:hover{
+    transform: scale(1.1);
+    background-color: #fe424b !important;
+    color: #120c0c !important;
+}
+
+.btn-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.update-btn{
+    background-color: #fe424b !important;
+    border: none !important;
+    transition: transform .2s;
+}
+.update-btn:hover{
+    transform: scale(1.1);
+    background-color: #fe424b !important;
+    color: #120c0c !important;
+}
+
+.udbtn{
+    display: flex;
+
+}
+
+/* show page */
+
+.show-img{
+    height: 30vh;
+}
+
+.btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit-btn{
+    background-color: #fe424b !important;
+    border: none !important;
+    transition: transform .2s;
+}
+.edit-btn:hover{
+    transform: scale(1.1);
+    background-color: #fe424b !important;
+    color: #120c0c !important;
+}
+
+.del-btn{
+    background-color: #fe424b !important;
+    border: none !important;
+    transition: transform .2s;
+}
+.del-btn:hover{
+    transform: scale(1.1);
+    background-color: #fe424b !important;
+    color: #120c0c !important;
+}
+
+/* Map */
+
+#map{
+    height: 400px;
+    width: 60vh;
+}
+
+@media (max-width: 768px) {
+    #map{
+        height: 30vh;
+        width: 30vh;
+    }
+}
